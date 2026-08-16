@@ -57,4 +57,14 @@ let getPost=(posts , date , keyword)=>{
     })
     return newArr;
 }
-console.log(getPost(postArr,'18/8/2026','jamal'));
+// console.log(getPost(postArr,'18/8/2026','jamal'));
+//adding new post 
+function addPost(posts,newPost){
+    let updatePost= posts.push(newPost);
+    return posts;
+}
+console.log(addPost(postArr,  {
+        text:'Attack on Titan season5',
+        date:'19/8/2026',
+        url:'postLink',
+    }));
