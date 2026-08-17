@@ -68,3 +68,14 @@ function removePost(posts,keyword){
     let updatePost=posts.filter((elm)=> !elm.text.includes(keyword));
     return updatePost;
 }
+function editPost(posts,keyword,newText){
+let updatedPost=posts.map((elment)=>{
+    if(elment.text.includes(keyword)){
+        elment.text=newText;
+    }
+    return elment.text;
+})
+return posts;
+}
+// console.log(editPost(postArr,"fifa","Ashes 5th test 28"));
+console.log(editPost(postArr,"fifa","chatgpt launch v2.212"));
