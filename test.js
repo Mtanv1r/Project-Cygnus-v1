@@ -63,20 +63,8 @@ function addPost(posts,newPost){
     let updatePost= posts.push(newPost);
     return posts;
 }
-console.log(addPost(postArr,  {
-        text:'Attack on Titan season5',
-        date:'19/8/2026',
-        url:'postLink',
-    }));
-
 //removing post 
 function removePost(posts,keyword){
-    // let updatePost=posts.filter((elm)=>{
-    //     if(elm.text.includes(keyword)){
-
-    //     }
-    // })
-    let updatePost=posts.filter((elm)=> elm.text !== keyword);
+    let updatePost=posts.filter((elm)=> !elm.text.includes(keyword));
     return updatePost;
 }
-console.log(removePost(postArr,"jamal"));
