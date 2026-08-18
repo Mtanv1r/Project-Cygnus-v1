@@ -73,9 +73,9 @@ let updatedPost=posts.map((elment)=>{
     if(elment.text.includes(keyword)){
         elment.text=newText;
     }
-    return elment.text;
+    return elment;
 })
-return posts;
+return updatedPost;
 }
-// console.log(editPost(postArr,"fifa","Ashes 5th test 28"));
-console.log(editPost(postArr,"fifa","chatgpt launch v2.212"));
+// console.log(editPost(postArr,"fifa","chatgpt launch v2.212"));
+// console.log(editPost(postArr,"Ncp","Claude launch their Claude mythos version"));
