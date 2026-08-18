@@ -29,7 +29,6 @@ let postArr=[
         url:'postLink',
     }
 ];
-//filtering by date
 // const getPostByDate=(posts,date)=>{
 //     // filtering 
 //     newarr=posts.filter((elm)=>{
@@ -57,13 +56,11 @@ let getPost=(posts , date , keyword)=>{
     })
     return newArr;
 }
-// console.log(getPost(postArr,'18/8/2026','jamal'));
 //adding new post 
 function addPost(posts,newPost){
     let updatePost= posts.push(newPost);
     return posts;
 }
-//removing post 
 function removePost(posts,keyword){
     let updatePost=posts.filter((elm)=> !elm.text.includes(keyword));
     return updatePost;
@@ -77,5 +74,3 @@ let updatedPost=posts.map((elment)=>{
 })
 return updatedPost;
 }
-// console.log(editPost(postArr,"fifa","chatgpt launch v2.212"));
-// console.log(editPost(postArr,"Ncp","Claude launch their Claude mythos version"));
